@@ -23,10 +23,10 @@
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans:  'Jost', sans-serif;
   }
- 
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
- 
+
   body {
     background: var(--beige);
     color: var(--ink);
@@ -35,7 +35,7 @@
     line-height: 1.7;
     overflow-x: hidden;
   }
- 
+
   /* noise */
   body::after {
     content: '';
@@ -44,12 +44,12 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
     opacity: 0.45;
   }
- 
+
   /* ─── MODE SWITCH ─── */
   /* Everything inside .view is hidden by default */
   .view { display: none; }
   .view.active { display: block; }
- 
+
   /* ─── NAV ─── */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
@@ -78,7 +78,7 @@
     transition: color 0.3s;
   }
   nav.light .nav-logo { color: var(--ink); }
- 
+
   .nav-center {
     display: flex;
     gap: 36px;
@@ -99,7 +99,7 @@
   .nav-center a:hover { color: rgba(240,237,230,0.9); }
   nav.light .nav-center a { color: var(--ink-muted); }
   nav.light .nav-center a:hover { color: var(--ink); }
- 
+
   /* Mode toggle pill */
   .mode-toggle {
     display: flex;
@@ -133,14 +133,14 @@
   }
   .mode-btn:not(.active):hover { color: rgba(240,237,230,0.7); }
   nav.light .mode-btn:not(.active):hover { color: var(--ink-muted); }
- 
+
   /* ─── VIEW TRANSITIONS ─── */
   .view { animation: viewIn 0.5s ease forwards; }
   @keyframes viewIn {
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: none; }
   }
- 
+
   /* ─── HERO BASE ─── */
   .hero {
     min-height: 100vh;
@@ -228,7 +228,7 @@
     width: 1px; height: 36px;
     animation: scrollPulse 2s ease infinite;
   }
- 
+
   /* ── HERO UX — beige ── */
   .hero-ux {
     background: var(--beige);
@@ -257,7 +257,7 @@
   .hero-ux .tag.solid { background: var(--ink); color: var(--beige); border-color: var(--ink); }
   .hero-ux .scroll-hint { color: var(--ink-faint); }
   .hero-ux .scroll-line { background: linear-gradient(to bottom, var(--ink-faint), transparent); }
- 
+
   .btn-primary-ux {
     display: inline-flex; align-items: center; gap: 10px;
     padding: 13px 28px; background: var(--ink); color: var(--beige);
@@ -275,7 +275,7 @@
     transition: all 0.25s;
   }
   .btn-secondary-ux:hover { border-color: var(--ink); color: var(--ink); }
- 
+
   /* ── HERO GRÁFICO — negro ── */
   .hero-graphic {
     background: var(--ink);
@@ -303,7 +303,7 @@
   .hero-graphic .tag.solid { background: var(--beige); color: var(--ink); border-color: var(--beige); }
   .hero-graphic .scroll-hint { color: rgba(240,237,230,0.25); }
   .hero-graphic .scroll-line { background: linear-gradient(to bottom, rgba(240,237,230,0.3), transparent); }
- 
+
   .btn-primary-g {
     display: inline-flex; align-items: center; gap: 10px;
     padding: 13px 28px; background: var(--beige); color: var(--ink);
@@ -321,7 +321,7 @@
     transition: all 0.25s;
   }
   .btn-secondary-g:hover { border-color: rgba(240,237,230,0.7); color: var(--beige); }
- 
+
   /* ─── SECTION BASE ─── */
   section { padding: 112px 64px; }
   .section-header {
@@ -342,14 +342,14 @@
     font-family: var(--font-sans); font-size: 13px; font-weight: 300;
     color: var(--ink-muted); margin-top: 12px; line-height: 1.75; max-width: 480px;
   }
- 
+
   /* ─── ABOUT ─── */
   .about-section { background: var(--ink); color: var(--beige); }
   .about-section .section-title { color: var(--beige); }
   .about-section .section-num   { color: rgba(240,237,230,0.2); }
   .about-section .section-sub   { color: rgba(240,237,230,0.45); }
   .about-section .section-header{ border-bottom-color: rgba(240,237,230,0.08); }
- 
+
   .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; }
   .about-quote {
     font-family: var(--font-serif); font-size: clamp(19px,1.9vw,24px);
@@ -378,7 +378,7 @@
     transition: all 0.2s;
   }
   .skill-pill:hover { color: rgba(240,237,230,0.9); border-color: rgba(240,237,230,0.28); }
- 
+
   /* ─── UX PROJECTS ─── */
   .work-section { background: var(--beige); padding-bottom: 0; }
   .project-block {
@@ -449,14 +449,16 @@
     font-weight: 300; line-height: 1.8; color: var(--ink-soft);
   }
   .learning-text strong { font-weight: 600; font-style: normal; }
- 
+
   /* project visual panels */
   .project-visual {
     background: var(--beige-mid);
     display: flex; align-items: center; justify-content: center;
     padding: 52px 44px; min-height: 480px;
   }
- 
+  .project-visual img {
+    transition: transform 0.3s ease,
+
   /* ─── UX VISUAL COMPONENTS ─── */
   .demo-label {
     font-family: var(--font-sans); font-size: 9px; font-weight: 400;
@@ -483,7 +485,7 @@
   .ftags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 12px; }
   .ftag { font-family: var(--font-sans); font-size: 9px; font-weight: 300; letter-spacing: 0.04em; padding: 4px 9px; border: 1px solid var(--rule); color: var(--ink-faint); }
   .ftag.done { background: var(--ink); color: var(--beige); border-color: var(--ink); }
- 
+
   .nav-demo { width: 100%; max-width: 330px; }
   .mock-win { background: var(--beige); border: 1px solid var(--rule); overflow: hidden; margin-bottom: 4px; }
   .mock-tb { background: var(--beige-dark); height: 26px; display: flex; align-items: center; padding: 0 10px; gap: 5px; border-bottom: 1px solid var(--rule); }
@@ -500,13 +502,13 @@
   .mock-topnav { height: 28px; background: var(--ink); display: flex; align-items: center; padding: 0 12px; gap: 12px; }
   .tnav-item { font-family: var(--font-sans); font-size: 8px; font-weight: 300; letter-spacing: 0.1em; color: rgba(240,237,230,0.38); text-transform: uppercase; }
   .tnav-item.active { color: var(--beige); border-bottom: 1px solid var(--beige); }
- 
+
   /* flow steps */
   .flow-step { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 14px 18px; background: var(--beige); border: 1px solid var(--rule); margin-bottom: 2px; }
   .flow-step-inner { display: flex; align-items: center; gap: 10px; }
   .flow-num { width: 22px; height: 22px; background: var(--ink); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: var(--font-sans); font-size: 10px; font-weight: 500; color: var(--beige); }
   .flow-connector { width: 1px; height: 10px; background: var(--rule); margin-left: 26px; }
- 
+
   /* IA grid */
   .ia-root { background: var(--beige); border: 1px solid var(--rule); padding: 16px 18px; margin-bottom: 2px; }
   .ia-root-title { font-family: var(--font-sans); font-size: 10px; font-weight: 500; color: var(--ink); margin-bottom: 12px; letter-spacing: 0.05em; }
@@ -518,7 +520,7 @@
   .ia-persona { background: var(--beige); border: 1px solid var(--rule); padding: 12px 14px; }
   .ia-persona-label { font-family: var(--font-sans); font-size: 9px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; }
   .ia-persona-desc { font-size: 10px; font-weight: 300; color: var(--ink-muted); line-height: 1.6; }
- 
+
   /* ─── PROCESS SECTION ─── */
   .process-section { background: var(--beige-mid); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .process-grid { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid var(--rule); }
@@ -529,10 +531,10 @@
   .process-step-tag { font-family: var(--font-sans); font-size: 9px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 14px; }
   .process-step-title { font-family: var(--font-serif); font-size: 22px; font-weight: 300; margin-bottom: 12px; }
   .process-step-desc { font-size: 12px; font-weight: 300; line-height: 1.85; color: var(--ink-muted); }
- 
+
   /* ─── GRAPHIC PROJECTS ─── */
   .graphic-intro { background: var(--beige); padding-bottom: 0; }
- 
+
   /* Featured project */
   .gproject { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--rule); }
   .gproject:last-of-type { border-bottom: 1px solid var(--rule); }
@@ -551,7 +553,7 @@
   .gp-tag.dark { background: var(--ink); color: var(--beige); border-color: var(--ink); }
   .gp-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-sans); font-size: 10px; font-weight: 400; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; width: fit-content; transition: gap 0.2s; }
   .gp-link:hover { gap: 14px; }
- 
+
   /* 2-col grid for smaller projects */
   .gproject-row { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--rule); }
   .gproject-row:last-of-type { border-bottom: 1px solid var(--rule); }
@@ -564,7 +566,7 @@
   .gc-client { font-family: var(--font-sans); font-size: 10px; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 12px; }
   .gc-desc { font-size: 12px; font-weight: 300; line-height: 1.8; color: var(--ink-muted); }
   .gc-desc strong { color: var(--ink); font-weight: 400; }
- 
+
   /* ── GRAPHIC VISUAL MOCKUPS ── */
   .kua-visual {
     background: #ece9e2; width: 100%; height: 100%;
@@ -578,7 +580,7 @@
   .kua-word { font-family: var(--font-serif); font-size: 20px; font-weight: 300; letter-spacing: 0.04em; color: var(--beige); }
   .kua-sym { display: grid; grid-template-columns: repeat(3,20px); grid-template-rows: repeat(3,20px); gap: 2px; margin-top: 6px; }
   .ks { background: var(--beige-dark); } .ks.d { background: var(--ink); } .ks.m { background: var(--ink-muted); }
- 
+
   .herb-visual {
     width: 100%; height: 100%;
     background: linear-gradient(135deg, #1a3d2a, #2d5a3d);
@@ -590,7 +592,7 @@
   .herb-logo { font-family: var(--font-serif); font-size: 20px; font-weight: 300; letter-spacing: 0.08em; color: var(--white, #fff); margin-bottom: 10px; }
   .herb-tag { font-family: var(--font-sans); font-size: 11px; font-style: italic; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 14px; }
   .herb-btn { display: inline-block; padding: 7px 16px; background: #fff; color: #1a3d2a; font-family: var(--font-sans); font-size: 9px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; }
- 
+
   .green-visual {
     width: 100%; height: 100%;
     background: #0d1f0d;
@@ -607,7 +609,7 @@
   .gv-feat { padding: 10px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); }
   .gv-feat-t { font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.65); margin-bottom: 3px; letter-spacing: 0.04em; }
   .gv-feat-d { font-size: 8px; font-weight: 300; color: rgba(255,255,255,0.28); line-height: 1.4; }
- 
+
   .pant-visual {
     width: 100%; height: 100%;
     background: linear-gradient(160deg, #0a0a50, #1a1a6e);
@@ -623,7 +625,7 @@
   .pant-dots { display: flex; gap: 7px; }
   .pant-dot { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.06); border: 1px solid rgba(200,164,0,0.25); }
   .pant-dot.g { background: rgba(200,164,0,0.18); border-color: #c8a400; }
- 
+
   .hs-visual {
     width: 100%; height: 100%;
     background: #c8102e;
@@ -637,7 +639,7 @@
   .hs-bl { font-size: 7px; font-weight: 300; color: rgba(255,255,255,0.55); letter-spacing: 0.06em; text-transform: uppercase; text-align: center; }
   .hs-pills { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; max-width: 210px; }
   .hs-pill-t { padding: 3px 10px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.75); font-size: 8px; font-weight: 300; letter-spacing: 0.06em; text-transform: uppercase; }
- 
+
   .social-visual {
     width: 100%; height: 100%;
     background: var(--ink);
@@ -651,7 +653,7 @@
   .sv-label { font-family: var(--font-sans); font-size: 8px; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 3px; }
   .sv-title { font-family: var(--font-serif); font-size: 20px; font-weight: 300; color: #fff; line-height: 1; }
   .sv-geo { position: absolute; top: 10px; right: 10px; width: 26px; height: 26px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); }
- 
+
   /* ─── CONTACT ─── */
   .contact-section { background: var(--ink); color: var(--beige); }
   .contact-section .section-title { color: var(--beige); }
@@ -666,22 +668,22 @@
   .cl-value { font-family: var(--font-sans); font-size: 14px; font-weight: 300; color: rgba(240,237,230,0.75); }
   .cl-arrow { font-size: 18px; color: rgba(240,237,230,0.28); transition: all 0.2s; }
   .contact-link:hover .cl-arrow { color: rgba(240,237,230,0.8); transform: translate(4px,-4px); }
- 
+
   /* ─── FOOTER ─── */
   footer { background: var(--ink); padding: 24px 64px; border-top: 1px solid rgba(240,237,230,0.07); display: flex; justify-content: space-between; align-items: center; }
   .footer-copy, .footer-note { font-family: var(--font-sans); font-size: 10px; font-weight: 300; letter-spacing: 0.08em; color: rgba(240,237,230,0.22); }
- 
+
   /* ─── ANIMATIONS ─── */
   @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
   @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
   @keyframes scrollPulse { 0%,100% { opacity:.3; } 50% { opacity:.8; } }
   @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:.25; } }
- 
+
   /* ─── REVEAL ─── */
   .reveal { opacity:0; transform:translateY(22px); transition: opacity .85s cubic-bezier(.25,.46,.45,.94), transform .85s cubic-bezier(.25,.46,.45,.94); }
   .reveal.visible { opacity:1; transform:none; }
   .d1 { transition-delay:.1s; } .d2 { transition-delay:.22s; } .d3 { transition-delay:.34s; }
- 
+
   /* ─── RESPONSIVE ─── */
   @media (max-width:960px) {
     nav { padding:18px 24px; }
@@ -708,7 +710,7 @@
 </style>
 </head>
 <body>
- 
+
 <!-- ── NAV ── -->
 <nav id="nav">
   <a href="#" class="nav-logo">Natalia Pérez Leal</a>
@@ -723,12 +725,12 @@
     <button class="mode-btn" id="btnG" onclick="setMode('graphic')">Gráfico / UI</button>
   </div>
 </nav>
- 
+
 <!-- ══════════════════════════════════════════
      VIEW: UX
 ══════════════════════════════════════════ -->
 <div class="view active" id="view-ux">
- 
+
   <!-- HERO UX -->
   <section class="hero hero-ux" id="ux-home">
     <div class="hero-left">
@@ -763,7 +765,7 @@
     </div>
     <div class="scroll-hint"><div class="scroll-line"></div>Scroll</div>
   </section>
- 
+
   <!-- ABOUT UX -->
   <section id="about" class="about-section">
     <div class="section-header reveal">
@@ -807,14 +809,14 @@
       </div>
     </div>
   </section>
- 
+
   <!-- WORK UX -->
   <section id="work" class="work-section">
     <div class="section-header reveal">
       <span class="section-num">02</span>
       <div><h2 class="section-title">Casos de <em>estudio</em></h2><p class="section-sub">Proyectos reales, problemas reales. Proceso visible y decisiones justificadas.</p></div>
     </div>
- 
+
     <!-- P01 Bizagi Studio -->
     <div class="project-block reveal">
       <div class="project-content">
@@ -826,15 +828,35 @@
         <div class="case-block"><div class="case-label">La solución</div><div class="case-text">Sistema de tres estados con feedback visual inequívoco, integrado con un módulo de comunicación que permite notificar a usuarios antes de ejecutar la acción. <strong>La comunicación se diseñó como parte del flujo de control, no como una feature separada.</strong></div></div>
         <div class="learning-box"><div class="learning-label">Aprendizaje de diseño</div><div class="learning-text">En herramientas enterprise, <strong>el feedback del sistema no es secundario: es la feature principal.</strong> Diseñar primero el estado y luego la acción —no al revés— fue lo que desbloqueó el flujo correcto.</div></div>
       </div>
-      <div class="project-visual" style="flex-direction:column; gap:12px; padding:32px 36px; background:var(--beige-mid);">
-        <div style="font-family:var(--font-sans);font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:4px;">Maintenance Window · estados del entorno</div>
-        <img src="assets/bizagi-maintenance-window.png"
-             alt="Bizagi Studio — Maintenance Window estados Running, Maintenance, comunicación y Restarting"
-             style="width:100%;border:1px solid var(--rule);display:block;">
-        <div style="font-family:var(--font-sans);font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint);margin-top:8px;margin-bottom:4px;">Full Service Restart · flujo completo</div>
-        <img src="assets/bizagi-full-restart.png"
-             alt="Bizagi Studio — Full Service Restart con confirmación y estado Restarting"
-             style="width:100%;border:1px solid var(--rule);display:block;">
+      <div class="project-visual" style="flex-direction:column; gap:16px; padding:32px 36px; background:var(--beige-mid);">
+        <!-- CAROUSEL -->
+        <div class="bizagi-carousel" style="position:relative;">
+          <div class="carousel-container" style="overflow:hidden; position:relative; width:100%; background:var(--beige); border:1px solid var(--rule);">
+            <div class="carousel-track" id="bizagiTrack" style="display:flex; transition:transform 0.4s ease; width:200%;">
+              <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:20px;">
+                <img src="assets/bizagi-maintenance-window.png"
+                     alt="Bizagi Studio — Maintenance Window"
+                     style="width:100%; max-height:500px; object-fit:contain; display:block;">
+              </div>
+              <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:20px;">
+                <img src="assets/bizagi-full-restart.png"
+                     alt="Bizagi Studio — Full Service Restart"
+                     style="width:100%; max-height:500px; object-fit:contain; display:block;">
+              </div>
+            </div>
+          </div>
+          <!-- Controls -->
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:12px; gap:12px;">
+            <button onclick="bizagiCarousel(-1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">← Anterior</button>
+            <div style="display:flex; gap:6px;" id="bizagiDots"></div>
+            <button onclick="bizagiCarousel(1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">Siguiente →</button>
+          </div>
+          <!-- Labels -->
+          <div style="display:flex; gap:8px; margin-top:10px;">
+            <div style="flex:1; font-family:var(--font-sans); font-size:9px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faint);" id="bizagiLabel">Maintenance Window · estados del entorno</div>
+          </div>
+        </div>
+
         <div class="ftags" style="margin-top:8px;">
           <span class="ftag">Visibilidad baja</span>
           <span class="ftag">Sin feedback</span>
@@ -842,8 +864,45 @@
           <span class="ftag done">→ Comunicación integrada</span>
         </div>
       </div>
+
+      <script>
+        let bizagiIndex = 0;
+        const bizagiSlides = 2;
+        const bizagiLabels = [
+          "Maintenance Window · estados del entorno",
+          "Full Service Restart · flujo completo"
+        ];
+
+        function initBizagiCarousel() {
+          const dotsContainer = document.getElementById('bizagiDots');
+          for (let i = 0; i < bizagiSlides; i++) {
+            const dot = document.createElement('div');
+            dot.style.cssText = `width:8px; height:8px; border-radius:50%; background:${i===0?'var(--ink)':'var(--rule)'}; cursor:pointer; transition:all 0.2s;`;
+            dot.onclick = () => { bizagiIndex = i; updateBizagiCarousel(); };
+            dotsContainer.appendChild(dot);
+          }
+          updateBizagiCarousel();
+        }
+
+        function bizagiCarousel(dir) {
+          bizagiIndex = (bizagiIndex + dir + bizagiSlides) % bizagiSlides;
+          updateBizagiCarousel();
+        }
+
+        function updateBizagiCarousel() {
+          document.getElementById('bizagiTrack').style.transform = `translateX(-${bizagiIndex * 100}%)`;
+          document.getElementById('bizagiLabel').textContent = bizagiLabels[bizagiIndex];
+          
+          const dots = document.getElementById('bizagiDots').querySelectorAll('div');
+          dots.forEach((d, i) => {
+            d.style.background = i === bizagiIndex ? 'var(--ink)' : 'var(--rule)';
+          });
+        }
+
+        initBizagiCarousel();
+      </script>
     </div>
- 
+
     <!-- P02 Bizagi Apps -->
     <div class="project-block reveal">
       <div class="project-content">
@@ -871,7 +930,7 @@
         </div>
       </div>
     </div>
- 
+
     <!-- P03 MercadoLibre -->
     <div class="project-block reveal">
       <div class="project-content">
@@ -902,7 +961,7 @@
         </div>
       </div>
     </div>
- 
+
     <!-- P04 Chocolates Jet -->
     <div class="project-block reveal">
       <div class="project-content">
@@ -940,7 +999,7 @@
       </div>
     </div>
   </section>
- 
+
   <!-- PROCESS -->
   <section id="process" class="process-section">
     <div class="section-header reveal">
@@ -954,7 +1013,7 @@
       <div class="process-step"><div class="process-step-big">4</div><div class="process-step-tag">Fase 04</div><h4 class="process-step-title">Refinar</h4><p class="process-step-desc">Iteración basada en hallazgos reales. Colaboración cercana con desarrollo. Especificaciones que reducen fricción en el handoff.</p></div>
     </div>
   </section>
- 
+
   <!-- CONTACT UX -->
   <section id="contact" class="contact-section">
     <div class="section-header reveal">
@@ -968,15 +1027,15 @@
       <a href="https://behance.net/nataliaperezleal" target="_blank" class="contact-link"><div><div class="cl-label">Behance</div><div class="cl-value">behance.net/nataliaperezleal</div></div><div class="cl-arrow">↗</div></a>
     </div>
   </section>
- 
+
 </div><!-- end view-ux -->
- 
- 
+
+
 <!-- ══════════════════════════════════════════
      VIEW: GRÁFICO
 ══════════════════════════════════════════ -->
 <div class="view" id="view-graphic">
- 
+
   <!-- HERO GRÁFICO -->
   <section class="hero hero-graphic" id="g-home">
     <div class="hero-left">
@@ -1011,14 +1070,14 @@
     </div>
     <div class="scroll-hint"><div class="scroll-line"></div>Scroll</div>
   </section>
- 
+
   <!-- WORK GRÁFICO -->
   <section id="g-work" class="graphic-intro">
     <div class="section-header reveal">
       <span class="section-num">01</span>
       <div><h2 class="section-title">Trabajo <em>selecto</em></h2><p class="section-sub">Identidad visual, UI y producción digital. Proyectos construidos con intención visual y consistencia de marca.</p></div>
     </div>
- 
+
     <!-- G01 Kuadrado -->
     <div class="gproject reveal">
       <div class="gproject-visual">
@@ -1043,7 +1102,7 @@
         <a href="https://www.behance.net/nataliaperezleal" target="_blank" class="gp-link">Ver en Behance ↗</a>
       </div>
     </div>
- 
+
     <!-- G02 GreenTech -->
     <div class="gproject reveal">
       <div class="gproject-visual">
@@ -1071,7 +1130,7 @@
         <a href="https://www.behance.net/gallery/231169671/UXUI-Design-Landing-B2B-SaaS-Services" target="_blank" class="gp-link">Ver en Behance ↗</a>
       </div>
     </div>
- 
+
     <!-- G03 + G04 Herbal + Pantene -->
     <div class="gproject-row reveal">
       <div class="gcard">
@@ -1093,7 +1152,7 @@
         </div>
       </div>
     </div>
- 
+
     <!-- G05 + G06 H&S + Social -->
     <div class="gproject-row reveal">
       <div class="gcard">
@@ -1116,7 +1175,7 @@
       </div>
     </div>
   </section>
- 
+
   <!-- CONTACT GRÁFICO -->
   <section id="g-contact" class="contact-section">
     <div class="section-header reveal">
@@ -1130,19 +1189,19 @@
       <a href="https://behance.net/nataliaperezleal" target="_blank" class="contact-link"><div><div class="cl-label">Behance</div><div class="cl-value">behance.net/nataliaperezleal</div></div><div class="cl-arrow">↗</div></a>
     </div>
   </section>
- 
+
 </div><!-- end view-graphic -->
- 
+
 <!-- FOOTER (shared) -->
 <footer>
   <p class="footer-copy">© 2025 Natalia Pérez Leal · UX/UI · Diseño Gráfico · Colombia</p>
   <p class="footer-note">Diseñado con intención</p>
 </footer>
- 
+
 <script>
   /* ── MODE SWITCH ── */
   let currentMode = 'ux';
- 
+
   function updateNav() {
     const heroHeight = window.innerHeight;
     const pastHero = window.scrollY > heroHeight - 80;
@@ -1154,34 +1213,34 @@
       nav.classList.toggle('light', pastHero);  // dark at top, light after scroll
     }
   }
- 
+
   function setMode(mode) {
     if (mode === currentMode) return;
     currentMode = mode;
- 
+
     document.getElementById('view-ux').classList.toggle('active', mode === 'ux');
     document.getElementById('view-graphic').classList.toggle('active', mode === 'graphic');
     document.getElementById('btnUX').classList.toggle('active', mode === 'ux');
     document.getElementById('btnG').classList.toggle('active', mode === 'graphic');
     document.getElementById('navProcess').style.display = mode === 'ux' ? '' : 'none';
- 
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setTimeout(() => { updateNav(); initReveals(); }, 100);
   }
- 
+
   /* ── SMOOTH SCROLL ── */
   function scrollToId(id) {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
- 
+
   /* ── NAV LIGHT/DARK ── */
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', updateNav);
- 
+
   // Init nav state — UX starts with beige hero so nav is light
   nav.classList.add('light');
- 
+
   /* ── SCROLL REVEAL ── */
   let revealObserver;
   function initReveals() {
@@ -1201,7 +1260,7 @@
     }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
     activeView.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   }
- 
+
   // Init on load
   initReveals();
 </script>
