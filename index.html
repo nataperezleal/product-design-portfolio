@@ -836,16 +836,28 @@
         <div class="case-block"><div class="case-label">La solución</div><div class="case-text">Sistema de tres estados con feedback visual inequívoco, integrado con un módulo de comunicación que permite notificar a usuarios antes de ejecutar la acción. <strong>La comunicación se diseñó como parte del flujo de control, no como una feature separada.</strong></div></div>
         <div class="learning-box"><div class="learning-label">Aprendizaje de diseño</div><div class="learning-text">En herramientas enterprise, <strong>el feedback del sistema no es secundario: es la feature principal.</strong> Diseñar primero el estado y luego la acción —no al revés— fue lo que desbloqueó el flujo correcto.</div></div>
       </div>
-      <div class="project-visual" style="flex-direction:column; gap:16px; padding:32px 36px; background:var(--beige-mid);">
-        <!-- CAROUSEL -->
+      <div class="project-visual" style="flex-direction:column; gap:32px; padding:32px 36px; background:var(--beige-mid);">
+        
+        <!-- CAROUSEL 1: Maintenance Window -->
         <div class="bizagi-carousel" style="position:relative;">
-          <div class="carousel-container" style="overflow:hidden; position:relative; width:100%; background:var(--beige); border:1px solid var(--rule); min-height:550px;">
-            <div class="carousel-track" id="bizagiTrack" style="display:flex; transition:transform 0.4s ease; width:200%; height:100%;">
+          <div style="font-family:var(--font-sans);font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;">Maintenance Window · estados del entorno</div>
+          <div class="carousel-container" style="overflow:hidden; position:relative; width:100%; background:var(--beige); border:1px solid var(--rule); min-height:500px;">
+            <div class="carousel-track" id="maintenanceTrack" style="display:flex; transition:transform 0.4s ease; width:100%;">
               <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
                 <img src="assets/bizagi-maintenance-window.png"
                      alt="Bizagi Studio — Maintenance Window"
                      style="width:100%; height:auto; display:block;">
               </div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:center; margin-top:12px; gap:8px;" id="maintenanceDots"></div>
+        </div>
+
+        <!-- CAROUSEL 2: Full Service Restart -->
+        <div class="bizagi-carousel" style="position:relative;">
+          <div style="font-family:var(--font-sans);font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;">Full Service Restart · flujo completo</div>
+          <div class="carousel-container" style="overflow:hidden; position:relative; width:100%; background:var(--beige); border:1px solid var(--rule); min-height:500px;">
+            <div class="carousel-track" id="restartTrack" style="display:flex; transition:transform 0.4s ease; width:100%;">
               <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
                 <img src="assets/bizagi-full-restart.png"
                      alt="Bizagi Studio — Full Service Restart"
@@ -853,16 +865,7 @@
               </div>
             </div>
           </div>
-          <!-- Controls -->
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:12px; gap:12px;">
-            <button onclick="bizagiCarousel(-1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">← Anterior</button>
-            <div style="display:flex; gap:6px;" id="bizagiDots"></div>
-            <button onclick="bizagiCarousel(1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">Siguiente →</button>
-          </div>
-          <!-- Labels -->
-          <div style="display:flex; gap:8px; margin-top:10px;">
-            <div style="flex:1; font-family:var(--font-sans); font-size:9px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faint);" id="bizagiLabel">Maintenance Window · estados del entorno</div>
-          </div>
+          <div style="display:flex; align-items:center; justify-content:center; margin-top:12px; gap:8px;" id="restartDots"></div>
         </div>
 
         <div class="ftags" style="margin-top:8px;">
@@ -874,40 +877,16 @@
       </div>
 
       <script>
-        let bizagiIndex = 0;
-        const bizagiSlides = 2;
-        const bizagiLabels = [
-          "Maintenance Window · estados del entorno",
-          "Full Service Restart · flujo completo"
-        ];
-
-        function initBizagiCarousel() {
-          const dotsContainer = document.getElementById('bizagiDots');
-          for (let i = 0; i < bizagiSlides; i++) {
-            const dot = document.createElement('div');
-            dot.style.cssText = `width:8px; height:8px; border-radius:50%; background:${i===0?'var(--ink)':'var(--rule)'}; cursor:pointer; transition:all 0.2s;`;
-            dot.onclick = () => { bizagiIndex = i; updateBizagiCarousel(); };
-            dotsContainer.appendChild(dot);
-          }
-          updateBizagiCarousel();
+        // Init both carousels with dots
+        function initCarousel(trackId, dotsId) {
+          const dotsContainer = document.getElementById(dotsId);
+          const dot = document.createElement('div');
+          dot.style.cssText = `width:8px; height:8px; border-radius:50%; background:var(--ink); cursor:pointer; transition:all 0.2s;`;
+          dotsContainer.appendChild(dot);
         }
 
-        function bizagiCarousel(dir) {
-          bizagiIndex = (bizagiIndex + dir + bizagiSlides) % bizagiSlides;
-          updateBizagiCarousel();
-        }
-
-        function updateBizagiCarousel() {
-          document.getElementById('bizagiTrack').style.transform = `translateX(-${bizagiIndex * 100}%)`;
-          document.getElementById('bizagiLabel').textContent = bizagiLabels[bizagiIndex];
-          
-          const dots = document.getElementById('bizagiDots').querySelectorAll('div');
-          dots.forEach((d, i) => {
-            d.style.background = i === bizagiIndex ? 'var(--ink)' : 'var(--rule)';
-          });
-        }
-
-        initBizagiCarousel();
+        initCarousel('maintenanceTrack', 'maintenanceDots');
+        initCarousel('restartTrack', 'restartDots');
       </script>
     </div>
 
