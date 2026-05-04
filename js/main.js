@@ -98,8 +98,8 @@ function initCarousel(carouselName, slideCount) {
   updateCarouselDots(carouselName);
 }
 
-// Initialize carousels (adjust slideCount for each)
-// Example: initCarousel('maintenance', 3); initCarousel('restart', 2);
-// For now, with single images:
-initCarousel('maintenance', 1);
-initCarousel('restart', 1);
+// Initialize carousels (adjust slideCount for each carousel)
+initCarousel('maintenance', 1);  // 1 image for now
+initCarousel('restart', 1);      // 1 image for now
+// When you add more images, update the numbers and add more carousel-slide divs in HTML
+
