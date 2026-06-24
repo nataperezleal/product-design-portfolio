@@ -104,7 +104,7 @@ initCarousel('restart', 4);      // 4 images
 initCarousel('meli', 2);  // 2 images
 
 // Graphic projects carousels
-initCarousel('kuadrado', 3);
+initCarousel('kuadrado', 5);
 initCarousel('greentech', 3);
 initCarousel('herbal', 3);
 initCarousel('pantene', 3);
