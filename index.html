@@ -37,7 +37,7 @@
     <div class="hero-left">
       <p class="hero-eyebrow">UX / UI Designer · Colombia</p>
       <h1 class="hero-name">Natalia<br><em>Pérez</em> Leal</h1>
-      <p class="hero-role">Senior Product Designer · Enterprise UX</p>
+      <p class="hero-role">Product Designer · Enterprise UX</p>
       <p class="hero-proposition">
         <strong>Diseño para plataformas enterprise donde la claridad no es opcional.</strong>
         Más de 8 años convirtiendo requerimientos técnicos complejos en experiencias
@@ -546,103 +546,218 @@
       <div><h2 class="section-title">Trabajo <em>selecto</em></h2><p class="section-sub">Identidad visual, UI y producción digital. Proyectos construidos con intención visual y consistencia de marca.</p></div>
     </div>
 
-    <!-- G01 Kuadrado -->
-    <div class="gproject reveal">
-      <div class="gproject-visual">
-        <div class="kua-visual" style="width:100%;height:100%;">
-          <div class="kua-name">Kuadrado</div>
-          <div class="kua-name-it">Kuadrado</div>
-          <div class="kua-sym">
-            <div class="ks d"></div><div class="ks d"></div><div class="ks"></div>
-            <div class="ks d"></div><div class="ks m"></div><div class="ks"></div>
-            <div class="ks"></div><div class="ks"></div><div class="ks d"></div>
+   <!-- G01 Kuadrado -->
+<div class="gproject reveal">
+  <div class="gproject-visual">
+    <!-- CARRUSEL EN LUGAR DEL KUA-VISUAL -->
+    <div style="position:relative; width:100%; height:100%;">
+      <div style="font-family:var(--font-sans);font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px; padding:24px 24px 0 24px;">Identidad visual · Kuadrado</div>
+      <div style="overflow:hidden; position:relative; width:100%; background:var(--beige); border:1px solid var(--rule); min-height:500px; margin:12px 24px;">
+        <div class="carousel-track" id="kuadradoTrack" style="display:flex; transition:transform 0.4s ease; width:100%;">
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/kuadrado_1.png" alt="Kuadrado - Aplicación 1" style="width:100%; height:auto; display:block;">
           </div>
-          <div class="kua-lockup"><div class="kua-k">K</div><div class="kua-word">kuadrado</div></div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/kuadrado_2.png" alt="Kuadrado - Aplicación 2" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/kuadrado_3.png" alt="Kuadrado - Aplicación 3" style="width:100%; height:auto; display:block;">
+          </div>
         </div>
       </div>
-      <div class="gproject-content">
-        <div class="gp-num">Proyecto 01</div>
-        <h3 class="gp-title">Identidad de marca — Kuadrado</h3>
-        <p class="gp-client">Kuadrado · Brand Identity · Logo Design · Visual System</p>
-        <p class="gp-desc">Agencia de crecimiento de marcas en LinkedIn. Necesitaban una identidad que transmitiera <strong>precisión estratégica</strong> desde el primer contacto visual. La construcción geométrica del símbolo parte del nombre mismo: el cuadrado como principio organizador, no como decoración.</p>
-        <p class="gp-desc">Sistema completo: exploración de símbolo, logotipo positivo y negativo, selección tipográfica y foundations digitales. <strong>Una marca construida para escalar.</strong></p>
-        <div class="gp-tags"><span class="gp-tag dark">Brand Identity</span><span class="gp-tag">Logo Design</span><span class="gp-tag">Visual System</span><span class="gp-tag">Tipografía</span></div>
-        <a href="https://www.behance.net/nataliaperezleal" target="_blank" class="gp-link">Ver en Behance ↗</a>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 24px 24px 24px;">
+        <button onclick="carouselNav('kuadrado', -1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">← Anterior</button>
+        <div style="display:flex; gap:6px;" id="kuadradoDots"></div>
+        <button onclick="carouselNav('kuadrado', 1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">Siguiente →</button>
       </div>
     </div>
+  </div>
+  <div class="gproject-content">
+    <div class="gp-num">Proyecto 01</div>
+    <h3 class="gp-title">Identidad de marca — Kuadrado</h3>
+    <p class="gp-client">Kuadrado · Brand Identity · Logo Design · Visual System</p>
+    <p class="gp-desc">Agencia de crecimiento de marcas en LinkedIn. Necesitaban una identidad que transmitiera <strong>precisión estratégica</strong> desde el primer contacto visual. La construcción geométrica del símbolo parte del nombre mismo: el cuadrado como principio organizador, no como decoración.</p>
+    <p class="gp-desc">Sistema completo: exploración de símbolo, logotipo positivo y negativo, selección tipográfica y foundations digitales. <strong>Una marca construida para escalar.</strong></p>
+    <div class="gp-tags"><span class="gp-tag dark">Brand Identity</span><span class="gp-tag">Logo Design</span><span class="gp-tag">Visual System</span><span class="gp-tag">Tipografía</span></div>
+    <a href="https://www.behance.net/nataliaperezleal" target="_blank" class="gp-link">Ver en Behance ↗</a>
+  </div>
+</div>
 
     <!-- G02 GreenTech -->
-    <div class="gproject reveal">
-      <div class="gproject-visual">
-        <div class="green-visual" style="width:100%;height:100%;">
-          <div class="gv-nav"><div class="gv-logo">GreenTech SaaS</div><span class="gv-pill">Demo gratuita</span></div>
-          <div class="gv-hero">
-            <div class="gv-headline">Optimiza tu<br>energía renovable</div>
-            <div class="gv-sub">Software inteligente para maximizar la eficiencia de tus sistemas energéticos</div>
-            <span class="gv-btn">Solicitar demo</span>
-            <div class="gv-feats">
-              <div class="gv-feat"><div class="gv-feat-t">Monitoreo Real</div><div class="gv-feat-d">Paneles solares y turbinas en un lugar</div></div>
-              <div class="gv-feat"><div class="gv-feat-t">Análisis IA</div><div class="gv-feat-d">Prevención de fallos con inteligencia artificial</div></div>
-              <div class="gv-feat"><div class="gv-feat-t">Optimización</div><div class="gv-feat-d">Recomendaciones automatizadas</div></div>
-            </div>
+<div class="gproject reveal">
+  <div class="gproject-visual">
+    <div style="position:relative; width:100%; height:100%;">
+      <div style="font-family:var(--font-sans);font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px; padding:24px 24px 0 24px;">Landing B2B SaaS · GreenTech</div>
+      <div style="overflow:hidden; position:relative; width:100%; background:var(--beige); border:1px solid var(--rule); min-height:500px; margin:12px 24px;">
+        <div class="carousel-track" id="greentechTrack" style="display:flex; transition:transform 0.4s ease; width:100%;">
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/greentech_1.png" alt="GreenTech - Aplicación 1" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/greentech_2.png" alt="GreenTech - Aplicación 2" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/greentech_3.png" alt="GreenTech - Aplicación 3" style="width:100%; height:auto; display:block;">
           </div>
         </div>
       </div>
-      <div class="gproject-content">
-        <div class="gp-num">Proyecto 02</div>
-        <h3 class="gp-title">UI Design — Landing B2B SaaS</h3>
-        <p class="gp-client">GreenTech SaaS · UI Design · Landing Page · B2B</p>
-        <p class="gp-desc">Landing page completa para plataforma de gestión de energía renovable. El reto: <strong>comunicar tecnología sofisticada a tomadores de decisión</strong> que necesitan entender el valor en segundos. Jerarquía visual clara, secciones de features y testimonios bien estructuradas.</p>
-        <p class="gp-desc">Paleta verde oscuro / negro con acento verde brillante para CTAs. Composición modular que escala sin perder coherencia visual.</p>
-        <div class="gp-tags"><span class="gp-tag dark">UI Design</span><span class="gp-tag">Landing Page</span><span class="gp-tag">B2B SaaS</span><span class="gp-tag">Figma</span><span class="gp-tag">Responsive</span></div>
-        <a href="https://www.behance.net/gallery/231169671/UXUI-Design-Landing-B2B-SaaS-Services" target="_blank" class="gp-link">Ver en Behance ↗</a>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 24px 24px 24px;">
+        <button onclick="carouselNav('greentech', -1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">← Anterior</button>
+        <div style="display:flex; gap:6px;" id="greentechDots"></div>
+        <button onclick="carouselNav('greentech', 1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">Siguiente →</button>
       </div>
     </div>
+  </div>
+  <div class="gproject-content">
+    <div class="gp-num">Proyecto 02</div>
+    <h3 class="gp-title">UI Design — Landing B2B SaaS</h3>
+    <p class="gp-client">GreenTech SaaS · UI Design · Landing Page · B2B</p>
+    <p class="gp-desc">Landing page completa para plataforma de gestión de energía renovable. El reto: <strong>comunicar tecnología sofisticada a tomadores de decisión</strong> que necesitan entender el valor en segundos. Jerarquía visual clara, secciones de features y testimonios bien estructuradas.</p>
+    <p class="gp-desc">Paleta verde oscuro / negro con acento verde brillante para CTAs. Composición modular que escala sin perder coherencia visual.</p>
+    <div class="gp-tags"><span class="gp-tag dark">UI Design</span><span class="gp-tag">Landing Page</span><span class="gp-tag">B2B SaaS</span><span class="gp-tag">Figma</span><span class="gp-tag">Responsive</span></div>
+    <a href="https://www.behance.net/gallery/231169671/UXUI-Design-Landing-B2B-SaaS-Services" target="_blank" class="gp-link">Ver en Behance ↗</a>
+  </div>
+</div>
 
-    <!-- G03 + G04 Herbal + Pantene -->
-    <div class="gproject-row reveal">
-      <div class="gcard">
-        <div class="gcard-visual"><div class="herb-visual" style="width:100%;height:100%;"><div class="herb-card"><div class="herb-logo">Herbal Essences</div><div class="herb-tag">"Nature-inspired hair care for the modern ritual."</div><span class="herb-btn">Descubrir</span></div></div></div>
-        <div class="gcard-content">
-          <div class="gc-num">Proyecto 03</div>
-          <h3 class="gc-title">Herbal Essences</h3>
-          <p class="gc-client">P&G · UI Design · Social Media · Campaña digital</p>
-          <p class="gc-desc">Assets digitales para web y redes sociales. <strong>Consistencia visual entre formatos</strong> — banners web, piezas de social media y experiencia interactiva Jebbit — manteniendo la identidad de marca global adaptada al mercado local.</p>
+<!-- G03 Herbal Essences -->
+<div class="gproject reveal">
+  <div class="gproject-visual">
+    <div style="position:relative; width:100%; height:100%;">
+      <div style="font-family:var(--font-sans);font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px; padding:24px 24px 0 24px;">Campaña digital · Herbal Essences</div>
+      <div style="overflow:hidden; position:relative; width:100%; background:var(--beige); border:1px solid var(--rule); min-height:500px; margin:12px 24px;">
+        <div class="carousel-track" id="herbalTrack" style="display:flex; transition:transform 0.4s ease; width:100%;">
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/herbal_1.png" alt="Herbal - Aplicación 1" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/herbal_2.png" alt="Herbal - Aplicación 2" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/herbal_3.png" alt="Herbal - Aplicación 3" style="width:100%; height:auto; display:block;">
+          </div>
         </div>
       </div>
-      <div class="gcard">
-        <div class="gcard-visual"><div class="pant-visual" style="width:100%;height:100%;"><div class="pant-logo-t">PANTENE</div><div class="pant-line"></div><div class="pant-card"><div class="pant-prod">Pro-V Series</div><div class="pant-desc">Tecnología avanzada para cabello fuerte y brillante.</div></div><div class="pant-dots"><div class="pant-dot g"></div><div class="pant-dot"></div><div class="pant-dot"></div></div></div></div>
-        <div class="gcard-content">
-          <div class="gc-num">Proyecto 04</div>
-          <h3 class="gc-title">Pantene UI</h3>
-          <p class="gc-client">P&G · UI Design · Campaña digital</p>
-          <p class="gc-desc">Propuesta de interfaz y assets visuales. <strong>Sistema azul profundo + dorado</strong> que eleva la percepción de la marca hacia el segmento premium sin perder accesibilidad masiva.</p>
-        </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 24px 24px 24px;">
+        <button onclick="carouselNav('herbal', -1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">← Anterior</button>
+        <div style="display:flex; gap:6px;" id="herbalDots"></div>
+        <button onclick="carouselNav('herbal', 1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">Siguiente →</button>
       </div>
     </div>
+  </div>
+  <div class="gproject-content">
+    <div class="gp-num">Proyecto 03</div>
+    <h3 class="gp-title">Herbal Essences</h3>
+    <p class="gp-client">P&G · UI Design · Social Media · Campaña digital</p>
+    <p class="gp-desc">Assets digitales para web y redes sociales. <strong>Consistencia visual entre formatos</strong> — banners web, piezas de social media y experiencia interactiva Jebbit — manteniendo la identidad de marca global adaptada al mercado local.</p>
+    <div class="gp-tags"><span class="gp-tag dark">Brand Identity</span><span class="gp-tag">Logo Design</span><span class="gp-tag">Visual System</span><span class="gp-tag">Tipografía</span></div>
+    <a href="https://www.behance.net/nataliaperezleal" target="_blank" class="gp-link">Ver en Behance ↗</a>
+  </div>
+</div>
 
-    <!-- G05 + G06 H&S + Social -->
-    <div class="gproject-row reveal">
-      <div class="gcard">
-        <div class="gcard-visual"><div class="hs-visual" style="width:100%;height:100%;"><div class="hs-logo-t">Head & Shoulders</div><div class="hs-badge"><div class="hs-bn">7</div><div class="hs-bl">días de<br>protección</div></div><div class="hs-pills"><span class="hs-pill-t">Anti-caspa</span><span class="hs-pill-t">Clínico</span><span class="hs-pill-t">Dermatólogos</span></div></div></div>
-        <div class="gcard-content">
-          <div class="gc-num">Proyecto 05</div>
-          <h3 class="gc-title">Head & Shoulders</h3>
-          <p class="gc-client">P&G · Jebbit · Experiencia interactiva</p>
-          <p class="gc-desc">Experiencia interactiva Jebbit para engagement digital. <strong>Flujo de quiz personalizado</strong> que conecta al usuario con el producto correcto según su perfil capilar — diseño visual y de interacción integrados.</p>
+<!-- G04 Pantene -->
+<div class="gproject reveal">
+  <div class="gproject-visual">
+    <div style="position:relative; width:100%; height:100%;">
+      <div style="font-family:var(--font-sans);font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px; padding:24px 24px 0 24px;">Campaña digital · Pantene</div>
+      <div style="overflow:hidden; position:relative; width:100%; background:var(--beige); border:1px solid var(--rule); min-height:500px; margin:12px 24px;">
+        <div class="carousel-track" id="panteneTrack" style="display:flex; transition:transform 0.4s ease; width:100%;">
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/pantene_1.png" alt="Pantene - Aplicación 1" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/pantene_2.png" alt="Pantene - Aplicación 2" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/pantene_3.png" alt="Pantene - Aplicación 3" style="width:100%; height:auto; display:block;">
+          </div>
         </div>
       </div>
-      <div class="gcard">
-        <div class="gcard-visual"><div class="social-visual" style="width:100%;height:100%;"><div class="sv-card"><div class="sv-geo"></div><div class="sv-label">International</div><div class="sv-title">SHIP<br>PING</div></div><div class="sv-card"><div class="sv-label">Worldwide</div><div class="sv-title">FAST<br>TRACK</div></div><div class="sv-card"><div class="sv-label">Express</div><div class="sv-title">DOOR<br>TO</div></div><div class="sv-card"><div class="sv-geo"></div><div class="sv-label">Global</div><div class="sv-title">ANY<br>WHERE</div></div></div></div>
-        <div class="gcard-content">
-          <div class="gc-num">Proyecto 06</div>
-          <h3 class="gc-title">Social Media</h3>
-          <p class="gc-client">International Shipping · Diseño editorial</p>
-          <p class="gc-desc">Sistema de piezas para redes sociales con <strong>grid modular tipográfico de alta legibilidad</strong>. Paleta restringida y consistencia visual entre feed, stories y reels.</p>
-        </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 24px 24px 24px;">
+        <button onclick="carouselNav('pantene', -1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">← Anterior</button>
+        <div style="display:flex; gap:6px;" id="panteneDots"></div>
+        <button onclick="carouselNav('pantene', 1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">Siguiente →</button>
       </div>
     </div>
-  </section>
+  </div>
+  <div class="gproject-content">
+    <div class="gp-num">Proyecto 04</div>
+    <h3 class="gp-title">Pantene UI</h3>
+    <p class="gp-client">P&G · UI Design · Campaña digital</p>
+    <p class="gp-desc">Propuesta de interfaz y assets visuales. <strong>Sistema azul profundo + dorado</strong> que eleva la percepción de la marca hacia el segmento premium sin perder accesibilidad masiva.</p>
+    <div class="gp-tags"><span class="gp-tag dark">Brand Identity</span><span class="gp-tag">Logo Design</span><span class="gp-tag">Visual System</span><span class="gp-tag">Tipografía</span></div>
+    <a href="https://www.behance.net/nataliaperezleal" target="_blank" class="gp-link">Ver en Behance ↗</a>
+  </div>
+</div>
+
+<!-- G05 Head & Shoulders -->
+<div class="gproject reveal">
+  <div class="gproject-visual">
+    <div style="position:relative; width:100%; height:100%;">
+      <div style="font-family:var(--font-sans);font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px; padding:24px 24px 0 24px;">Experiencia interactiva · Head & Shoulders</div>
+      <div style="overflow:hidden; position:relative; width:100%; background:var(--beige); border:1px solid var(--rule); min-height:500px; margin:12px 24px;">
+        <div class="carousel-track" id="hsTrack" style="display:flex; transition:transform 0.4s ease; width:100%;">
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/hs_1.png" alt="Head & Shoulders - Aplicación 1" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/hs_2.png" alt="Head & Shoulders - Aplicación 2" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/hs_3.png" alt="Head & Shoulders - Aplicación 3" style="width:100%; height:auto; display:block;">
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 24px 24px 24px;">
+        <button onclick="carouselNav('hs', -1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">← Anterior</button>
+        <div style="display:flex; gap:6px;" id="hsDots"></div>
+        <button onclick="carouselNav('hs', 1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">Siguiente →</button>
+      </div>
+    </div>
+  </div>
+  <div class="gproject-content">
+    <div class="gp-num">Proyecto 05</div>
+    <h3 class="gp-title">Head & Shoulders</h3>
+    <p class="gp-client">P&G · Jebbit · Experiencia interactiva</p>
+    <p class="gp-desc">Experiencia interactiva Jebbit para engagement digital. <strong>Flujo de quiz personalizado</strong> que conecta al usuario con el producto correcto según su perfil capilar — diseño visual y de interacción integrados.</p>
+    <div class="gp-tags"><span class="gp-tag dark">Brand Identity</span><span class="gp-tag">Logo Design</span><span class="gp-tag">Visual System</span><span class="gp-tag">Tipografía</span></div>
+    <a href="https://www.behance.net/nataliaperezleal" target="_blank" class="gp-link">Ver en Behance ↗</a>
+  </div>
+</div>
+
+<!-- G06 Social Media -->
+<div class="gproject reveal">
+  <div class="gproject-visual">
+    <div style="position:relative; width:100%; height:100%;">
+      <div style="font-family:var(--font-sans);font-size:9px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px; padding:24px 24px 0 24px;">Diseño editorial · Social Media</div>
+      <div style="overflow:hidden; position:relative; width:100%; background:var(--beige); border:1px solid var(--rule); min-height:500px; margin:12px 24px;">
+        <div class="carousel-track" id="socialTrack" style="display:flex; transition:transform 0.4s ease; width:100%;">
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/social_1.png" alt="Social Media - Pieza 1" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/social_2.png" alt="Social Media - Pieza 2" style="width:100%; height:auto; display:block;">
+          </div>
+          <div class="carousel-slide" style="flex:1; min-width:100%; display:flex; align-items:center; justify-content:center; padding:24px;">
+            <img src="assets/social_3.png" alt="Social Media - Pieza 3" style="width:100%; height:auto; display:block;">
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 24px 24px 24px;">
+        <button onclick="carouselNav('social', -1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">← Anterior</button>
+        <div style="display:flex; gap:6px;" id="socialDots"></div>
+        <button onclick="carouselNav('social', 1)" style="padding:8px 14px; border:1px solid var(--rule); background:var(--beige); color:var(--ink); font-family:var(--font-sans); font-size:10px; font-weight:400; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.2s;">Siguiente →</button>
+      </div>
+    </div>
+  </div>
+  <div class="gproject-content">
+    <div class="gp-num">Proyecto 06</div>
+    <h3 class="gp-title">Social Media</h3>
+    <p class="gp-client">International Shipping · Diseño editorial</p>
+    <p class="gp-desc">Sistema de piezas para redes sociales con <strong>grid modular tipográfico de alta legibilidad</strong>. Paleta restringida y consistencia visual entre feed, stories y reels.</p>
+    <div class="gp-tags"><span class="gp-tag dark">Brand Identity</span><span class="gp-tag">Logo Design</span><span class="gp-tag">Visual System</span><span class="gp-tag">Tipografía</span></div>
+    <a href="https://www.behance.net/nataliaperezleal" target="_blank" class="gp-link">Ver en Behance ↗</a>
+  </div>
+</div>
 
   <!-- FOOTER GRÁFICO (duplicado, solo actualiza el ID) -->
 <section id="g-contact" class="contact-section" style="background:var(--ink); padding:80px 40px;">

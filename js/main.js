@@ -102,3 +102,11 @@ function initCarousel(carouselName, slideCount) {
 initCarousel('maintenance', 9);  // 9 images
 initCarousel('restart', 4);      // 4 images
 initCarousel('meli', 2);  // 2 images
+
+// Graphic projects carousels
+initCarousel('kuadrado', 3);
+initCarousel('greentech', 3);
+initCarousel('herbal', 3);
+initCarousel('pantene', 3);
+initCarousel('hs', 3);
+initCarousel('social', 3);
