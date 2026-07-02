@@ -107,6 +107,6 @@ initCarousel('meli', 2);  // 2 images
 initCarousel('kuadrado', 5);
 initCarousel('greentech', 4);
 initCarousel('herbal', 4);
-initCarousel('pantene', 3);
+initCarousel('pantene', 2);
 initCarousel('hs', 3);
 initCarousel('social', 3);
