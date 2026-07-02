@@ -109,4 +109,4 @@ initCarousel('greentech', 4);
 initCarousel('herbal', 4);
 initCarousel('pantene', 3);
 initCarousel('hs', 4);
-initCarousel('social', 3);
+initCarousel('social', 2);
